@@ -1,0 +1,100 @@
+/* ######## css for moviehtml page header-section ######## */
+.container {
+    max-width: 95%;
+}
+.moviecontent{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hero-img{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.bgimg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.bgimg::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(4deg, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.7) 60%, transparent);
+    display: inline-block;
+}
+.hero-img i{
+    position: absolute;
+    color: var(--color-red);
+    z-index: 1;
+    transition: all .4s ease-in-out;
+}
+.hero-img i:hover,
+.hero-img i:focus,
+.hero-img i:active{
+    transform: scale(1.5);
+}
+.movieimg .logo {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+}
+.movieinfo {
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+.movieinfo li {
+    display: inline-block;
+    border-right: 2px solid var(--color-red);
+    font-size: 1.1rem;
+    color: var(--color-grey)
+}
+.movieinfo li span {
+    border: 2px solid;
+    padding: 4px 4px 1px 4px;
+}
+.movieinfo li:last-child{
+    border-right: none;
+}
+.movieinfo li:first-child{
+    padding-left: 0px;
+}
+/* ######## css for moviedetails section */
+
+.moviedetail {
+    background-image: linear-gradient(360deg, rgb(0, 0, 0) 100%, transparent);
+    position: relative;
+}
+#movieTrailerSlider figure {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+#movieTrailerSlider i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+}
+#movieTrailerSlider img{
+    transform: scale(1.2, 1.6);
+}
+#movieTrailerSlider figure + p{
+    color: var(--color-white);
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+.moviedetail .owl-prev{
+    left: -35px;
+}
+.moviedetail .owl-next{
+    right: -35px;
+}

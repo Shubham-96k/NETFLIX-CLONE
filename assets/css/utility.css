@@ -1,0 +1,23 @@
+
+.pri-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.pri-heading small {
+    color: var(--color-grey);
+    display: inline-block;
+    position: relative;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+.pri-heading small::before{
+    content: ' ';
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--color-red);
+}

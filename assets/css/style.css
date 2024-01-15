@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+:root{
+    --color-white : #fff;
+    --color-red : #e70e02;
+    --color-grey: #8e9aaf;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.mb-7{
+    margin-bottom: 7.5rem;
+}
+/* css for trending movie slider */
+.moviecard {
+    height: 90vh;
+    margin: 0;
+    position: relative; 
+}
+.moviecard img {
+    height: 100%;
+    object-fit: cover; 
+}
+.moviecard .moviecaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.7) 60%, transparent);
+    color: var(--color-white);
+}
+.moviecard .moviecaption em{
+    width: 70%;
+}
+.moviecaption .btn-outline-danger,
+.moviecaption .btn-outline-danger:hover{
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+.moviecaption .btn-outline-danger:hover,
+.moviecaption .btn-outline-danger:focus,
+.moviecaption .btn-outline-danger:active{
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+.movieSlider .owl-carousel .owl-nav .owl-prev, 
+.moviedetail .owl-carousel .owl-nav .owl-prev, 
+.movieSlider .owl-carousel .owl-nav .owl-next,
+.moviedetail .owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    color: var(--color-red);
+    font-size: 4rem;
+}
+.moviedetail .owl-carousel .owl-nav .owl-prev,
+.moviedetail .owl-carousel .owl-nav .owl-next {
+    top: 25%;
+    font-size: 5rem;
+}
+.movieSlider .owl-theme .owl-nav [class*=owl-],
+.moviedetail .owl-theme .owl-nav [class*=owl-]{
+    transition: all .3s ease-in-out;
+}
+.movieSlider .owl-theme .owl-nav [class*=owl-]:hover,
+.moviedetail .owl-theme .owl-nav [class*=owl-]:hover{
+    background: none;
+    transform: scale(1.5);
+}
+.movieSlider .owl-theme .owl-nav .disabled,
+.moviedetail .owl-theme .owl-nav .disabled{
+    opacity: 0;
+}
+.movieSlider .owl-prev{
+    left: 0;
+}
+.movieSlider .owl-next{
+    right: 1px;
+}
+.movieSlider .owl-theme .owl-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
