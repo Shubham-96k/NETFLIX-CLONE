@@ -43,7 +43,7 @@ const getTrendingMoviesData =  async () => {
             loop:true,
             margin:10,
             nav:true,
-            autoplay:true,
+            autoplay:false,
             autoplayTimeout:5000,
             autoplayHoverPause:true,
             responsive:{

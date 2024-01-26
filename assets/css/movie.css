@@ -25,7 +25,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(4deg, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.7) 60%, transparent);
+    background-image: linear-gradient(to top, rgba(0, 0, 0) 10%, rgba(0, 0, 0, 0.7) 60%, transparent);
     display: inline-block;
 }
 .hero-img i{
