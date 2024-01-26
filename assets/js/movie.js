@@ -1,6 +1,9 @@
 const movieContainer = document.getElementById("movieContainer");
 const backicon = document.getElementById("backicon");
 const movieTrailerSlider = document.getElementById("movieTrailerSlider");
+const iframe = document.getElementById("iframe");
+const backdrop = document.getElementById("backdrop");
+const movieTrailer = document.getElementById("movieTrailer");
 
 const movietemplating = (movieobj,moviecast) => {
     let result = `
@@ -48,11 +51,21 @@ const mintohr = eve => {
     }
 }
 
+const getTrailerId = (eve) => {
+    // cl(eve);
+    // $("#backdrop", "#movieTrailer").removeClass('d-none')
+    backdrop.classList.remove('d-none');
+    movieTrailer.classList.remove('d-none');
+    let id = eve.dataset.id; // return DOMStringMap with key id
+    cl(id);
+    iframe.src = `https://youtube.com/embed/${id}`;
+}
+
 const trailerSlidertemp = eve => {
     let result = " ";
     eve.forEach(ele => {
         result += `
-                <div class="item" data-id="${ele.key}" onclick"getTrailerId(this)">
+                <div class="item" data-id="${ele.key}" onclick="getTrailerId(this)">
                     <figure>
                     <img src="https://img.youtube.com/vi/${ele.key}/0.jpg" alt="${ele.name}" title="${ele.name}">
                     <figcaption>
@@ -67,6 +80,16 @@ const trailerSlidertemp = eve => {
     });
     movieTrailerSlider.innerHTML = result;
 }
+
+// $("backdrop", "movieTrailer").removeClass('d-none');
+
+const removebackd = () => {
+    backdrop.classList.add("d-none");
+    movieTrailer.classList.add("d-none");
+    iframe.src = " ";
+}
+
+backdrop.addEventListener("click", removebackd)
 
 document.addEventListener("DOMContentLoaded", async () => {
     let currentUrl = new URL(window.location.href);
