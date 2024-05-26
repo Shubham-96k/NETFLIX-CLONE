@@ -12,7 +12,7 @@ body{
 }
 /* css for trending movie slider */
 .moviecard {
-    height: 90vh;
+    height: 100vh;
     margin: 0;
     position: relative; 
 }
